@@ -1,76 +1,31 @@
 import React from "react";
 import "./index.css";
-import logo from "../src/assets/logo.png"
-const menuItems = [
+import logo from "../src/assets/logo.png";
+
+const pavBhajiItems = [
   {
-    name: "Pav Bhaji",
+    name: "Reg. Bhaji",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
     description:
       "A delicious mix of mashed vegetables served with buttered bread rolls.",
-    price: "$8.99",
-    options: ["Butter", "Cheese"],
+    price: {
+      "500gm": "90 rupees",
+      "1KG": "170 rupees",
+    },
   },
+  // Add more Pav Bhaji items
+];
+
+const pulavItems = [
   {
     name: "Pulav",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
     description: "Fragrant rice cooked with vegetables and aromatic spices.",
     price: "$10.99",
-    options: ["Butter", "Cheese"],
   },
-  {
-    name: "Pav Bhaji",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description:
-      "A delicious mix of mashed vegetables served with buttered bread rolls.",
-    price: "$8.99",
-    options: ["Butter", "Cheese"],
-  },
-  {
-    name: "Pulav",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description: "Fragrant rice cooked with vegetables and aromatic spices.",
-    price: "$10.99",
-    options: ["Butter", "Cheese"],
-  },
-  {
-    name: "Pav Bhaji",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description:
-      "A delicious mix of mashed vegetables served with buttered bread rolls.",
-    price: "$8.99",
-    options: ["Butter", "Cheese"],
-  },
-  {
-    name: "Pulav",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description: "Fragrant rice cooked with vegetables and aromatic spices.",
-    price: "$10.99",
-    options: ["Butter", "Cheese"],
-  },
-  {
-    name: "Pav Bhaji",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description:
-      "A delicious mix of mashed vegetables served with buttered bread rolls.",
-    price: "$8.99",
-    options: ["Butter", "Cheese"],
-  },
-  {
-    name: "Pulav",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description: "Fragrant rice cooked with vegetables and aromatic spices.",
-    price: "$10.99",
-    options: ["Butter", "Cheese"],
-  },
-  // Add more items similarly
+  // Add more Pulav items
 ];
 
 const App = () => {
@@ -84,32 +39,59 @@ const App = () => {
         <div className="contact-info">
           <p>Contact us: 123-456-7890</p>
           <p>Email: info@thekilogram.com</p>
-          {/* Add more contact info or links as needed */}
         </div>
       </header>
       <div className="menu">
         <h2>Our Menu</h2>
-        <div className="menu-items">
-          {menuItems.map((item, index) => (
-            <div key={index} className="menu-item">
-              <img src={item.image} alt={item.name} />
-              <h3>{item.name}</h3>
-              <p className="description">{item.description}</p>
-              <p className="price">{item.price}</p>
-              <div className="options">
-                {item.options.map((option, idx) => (
-                  <span key={idx} className="option">
-                    {option}
-                  </span>
-                ))}
+        <div className="menu-section">
+          <h3>Pav Bhaji</h3>
+          <div className="menu-items">
+            {pavBhajiItems.map((item, index) => (
+              <div key={index} className="menu-item">
+                <img src={item.image} alt={item.name} className="dish-image" />
+                <div className="item-details">
+                  <h3>{item.name}</h3>
+                  <div className="price-section">
+                    <div className="price-variants">
+                      <div className="price-variant">
+                        <p>500gm</p>
+                        <p>{item.price["500gm"]}</p>
+                      </div>
+                      <div className="price-variant">
+                        <p>1KG</p>
+                        <p>{item.price["1KG"]}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+        <div className="menu-section">
+          <h3>Pulav</h3>
+          <div className="menu-items">
+            {pulavItems.map((item, index) => (
+              <div key={index} className="menu-item">
+                <img src={item.image} alt={item.name} />
+                <h3>{item.name}</h3>
+                <div className="price-section">
+                  <div className="price-variant">
+                    <p>500gm</p>
+                    <p>{item.price["500gm"]}</p>
+                  </div>
+                  <div className="price-variant">
+                    <p>1KG</p>
+                    <p>{item.price["1KG"]}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <footer>
         <p>&copy; 2024 The Kilogram</p>
-        {/* Add additional footer information or links */}
       </footer>
     </div>
   );
