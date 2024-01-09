@@ -1,13 +1,147 @@
+/* Update your styles.css or equivalent file with the following styles */
+
+/* ...Previous CSS... */
+
 body {
+  font-family: "Arial", sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f8f8f8; /* Updated background color */
+  color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 80px;
+  height: auto;
+}
+
+.logo h1 {
+  font-size: 28px;
+  margin: 5px 0;
+  color: #333; /* Update text color */
+}
+
+.contact-info {
+  font-size: 14px;
+  color: #777; /* Update text color */
+  margin-bottom: 20px;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; /* Update text color */
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px); /* Add a subtle hover effect */
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover img {
+  transform: scale(1.05); /* Scale image on hover */
+}
+
+.menu-item h3 {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333; /* Update text color */
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff6347; /* Updated price color */
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.option {
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #333; /* Update text color */
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #777; /* Update text color */
+}
+.logo img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%; /* Makes the logo circular */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+  transition: transform 0.3s ease-in-out; /* Apply a transition on hover */
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Enlarge the logo on hover */
+}
+
+.logo h1 {
+  font-size: 28px;
+  margin: 5px 0;
+  color: #ff6347; /* Reddish-orange for the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a text shadow */
+}
+
+/* Add any other animations or styles as needed */
