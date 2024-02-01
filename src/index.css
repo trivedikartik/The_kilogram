@@ -16,6 +16,9 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
+.productHeader {
+  color:yellow !important
+}
 
 header {
   text-align: center;

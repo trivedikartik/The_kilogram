@@ -3,16 +3,62 @@ import "./index.css";
 import logo from "../src/assets/logo.jpeg";
 const menuItems = [
   {
-    name: "Pav Bhaji",
+    name: "Reg. Bhaji",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description:
-      "A delicious mix of mashed vegetables served with buttered bread rolls.",
-    price: "$8.99",
+    category: "bhajipav",
     options: [
       {
         qty: "1KG",
-        price: "100 Rs.",
+        price: "170 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "90 Rs.",
+      },
+    ],
+  },
+  {
+    name: "Swaminarayan Bhaji",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
+    category: "bhajipav",
+    options: [
+      {
+        qty: "1KG",
+        price: "170 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "90 Rs.",
+      },
+    ],
+  },
+  {
+    name: "Jain Bhaji",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
+    category: "bhajipav",
+    options: [
+      {
+        qty: "1KG",
+        price: "170 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "90 Rs.",
+      },
+    ],
+  },
+  {
+    name: "Green Bhaji",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
+    category: "bhajipav",
+    options: [
+      {
+        qty: "1KG",
+        price: "180 Rs.",
       },
       {
         qty: "500GM",
@@ -21,15 +67,14 @@ const menuItems = [
     ],
   },
   {
-    name: "Pulav",
+    name: "Bowl Bhaji",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description: "Fragrant rice cooked with vegetables and aromatic spices.",
-    price: "$10.99",
+    category: "bhajipav",
     options: [
       {
         qty: "1KG",
-        price: "100 Rs.",
+        price: "180 Rs.",
       },
       {
         qty: "500GM",
@@ -38,110 +83,157 @@ const menuItems = [
     ],
   },
   {
-    name: "Pav Bhaji",
+    name: "Paneer Bhaji",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description:
-      "A delicious mix of mashed vegetables served with buttered bread rolls.",
-    price: "$8.99",
+    category: "bhajipav",
     options: [
       {
         qty: "1KG",
-        price: "100 Rs.",
+        price: "210 Rs.",
       },
       {
         qty: "500GM",
-        price: "100 Rs.",
+        price: "120 Rs.",
       },
     ],
   },
   {
-    name: "Pulav",
+    name: "Kilogram Sp. Bhaji",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description: "Fragrant rice cooked with vegetables and aromatic spices.",
-    price: "$10.99",
+    category: "bhajipav",
     options: [
       {
         qty: "1KG",
-        price: "100 Rs.",
+        price: "270 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "150 Rs.",
+      },
+    ],
+  },
+
+  {
+    name: "Veg. Pulav",
+    image:
+      "https://geekrobocook.com/wp-content/uploads/2021/01/39_Vegetable-Pulav.jpg",
+    category: "pulav",
+    options: [
+      {
+        qty: "1KG",
+        price: "170 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "90 Rs.",
+      },
+    ],
+  },
+
+  {
+    name: "Tawa Pulav",
+    image:
+      "https://geekrobocook.com/wp-content/uploads/2021/01/39_Vegetable-Pulav.jpg",
+    category: "pulav",
+    options: [
+      {
+        qty: "1KG",
+        price: "170 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "90 Rs.",
+      },
+    ],
+  },
+
+  {
+    name: "Jain Pulav",
+    image:
+      "https://geekrobocook.com/wp-content/uploads/2021/01/39_Vegetable-Pulav.jpg",
+    category: "pulav",
+    options: [
+      {
+        qty: "1KG",
+        price: "170 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "90 Rs.",
+      },
+    ],
+  },
+
+  {
+    name: "Swaminarayan Pulav",
+    image:
+      "https://geekrobocook.com/wp-content/uploads/2021/01/39_Vegetable-Pulav.jpg",
+    category: "pulav",
+    options: [
+      {
+        qty: "1KG",
+        price: "170 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "90 Rs.",
+      },
+    ],
+  },
+
+  {
+    name: "Kashmiri Pulav",
+    image:
+      "https://geekrobocook.com/wp-content/uploads/2021/01/39_Vegetable-Pulav.jpg",
+    category: "pulav",
+    options: [
+      {
+        qty: "1KG",
+        price: "180 Rs.",
       },
       {
         qty: "500GM",
         price: "100 Rs.",
       },
     ],
+  },
+
+  {
+    name: "Kilogram Sp. Pulav",
+    image:
+      "https://geekrobocook.com/wp-content/uploads/2021/01/39_Vegetable-Pulav.jpg",
+    category: "pulav",
+    options: [
+      {
+        qty: "1KG",
+        price: "250 Rs.",
+      },
+      {
+        qty: "500GM",
+        price: "130 Rs.",
+      },
+    ],
+  },
+
+  {
+    name: "500 GM Bhaji + 500 GM Pulav + 6 Pav",
+    image:
+      "https://florafoods.in/wp-content/uploads/2023/07/COMBO-OFFERS-.png",
+    category: "combo",
+    price:'180 Rs'
+   
   },
   {
-    name: "Pav Bhaji",
+    name: "1 KG Bhaji + 1 KG Pulav + 12 Pav",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description:
-      "A delicious mix of mashed vegetables served with buttered bread rolls.",
-    price: "$8.99",
-    options: [
-      {
-        qty: "1KG",
-        price: "100 Rs.",
-      },
-      {
-        qty: "500GM",
-        price: "100 Rs.",
-      },
-    ],
+      "https://florafoods.in/wp-content/uploads/2023/07/COMBO-OFFERS-.png",
+    category: "combo",
+    price:'350 Rs'
+   
   },
-  {
-    name: "Pulav",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description: "Fragrant rice cooked with vegetables and aromatic spices.",
-    price: "$10.99",
-    options: [
-      {
-        qty: "1KG",
-        price: "100 Rs.",
-      },
-      {
-        qty: "500GM",
-        price: "100 Rs.",
-      },
-    ],
-  },
-  {
-    name: "Pav Bhaji",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description:
-      "A delicious mix of mashed vegetables served with buttered bread rolls.",
-    price: "$8.99",
-    options: [
-      {
-        qty: "1KG",
-        price: "100 Rs.",
-      },
-      {
-        qty: "500GM",
-        price: "100 Rs.",
-      },
-    ],
-  },
-  {
-    name: "Pulav",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    description: "Fragrant rice cooked with vegetables and aromatic spices.",
-    price: "$10.99",
-    options: [
-      {
-        qty: "1KG",
-        price: "100 Rs.",
-      },
-      {
-        qty: "500GM",
-        price: "100 Rs.",
-      },
-    ],
-  },
+
   // Add more items similarly
 ];
 
@@ -166,22 +258,68 @@ const App = () => {
       <div className="main">
         <div className="menu">
           <h2>Our Menu</h2>
+
+          <h3 className="productHeader">Bhaji Pav</h3>
+
           <div className="menu-items">
-            {menuItems.map((item, index) => (
-              <div key={index} className="menu-item">
-                <img src={item.image} alt={item.name} />
-                <h3>{item.name}</h3>
-                <div className="options">
-                  {item.options.map((option, idx) => (
-                    <span key={idx}>
-                      <p className="option">{option.qty}</p>
-                      <p></p>
-                      <p className="option">{option.price}</p>
-                    </span>
-                  ))}
+            {menuItems
+              .filter((item) => item.category === "bhajipav")
+              .map((item, index) => (
+                <div key={index} className="menu-item">
+                  <img src={item.image} alt={item.name} />
+                  <h3>{item.name}</h3>
+                  <div className="options">
+                    {item.options.map((option, idx) => (
+                      <span key={idx}>
+                        <p className="option">{option.qty}</p>
+                        <p></p>
+                        <p className="option">{option.price}</p>
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
+          <hr />
+          <h3 className="productHeader">Pulav</h3>
+
+          <div className="menu-items">
+            {menuItems
+              .filter((item) => item.category === "pulav")
+              .map((item, index) => (
+                <div key={index} className="menu-item">
+                  <img src={item.image} alt={item.name} />
+                  <h3>{item.name}</h3>
+                  <div className="options">
+                    {item.options.map((option, idx) => (
+                      <span key={idx}>
+                        <p className="option">{option.qty}</p>
+                        <p></p>
+                        <p className="option">{option.price}</p>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+          </div>
+
+          <hr />
+          <h3 className="productHeader">Combos</h3>
+
+          <div className="menu-items">
+            {menuItems
+              .filter((item) => item.category === "combo")
+              .map((item, index) => (
+                <div key={index} className="menu-item">
+                  <img src={item.image} alt={item.name} />
+                  <h3 >{item.name}</h3>
+                  <div className="options">
+                      <span >
+                        <p className="option">{item.price}</p>
+                      </span>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>
