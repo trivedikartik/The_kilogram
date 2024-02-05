@@ -1,6 +1,8 @@
 import React from "react";
 import "./index.css";
 import logo from "../src/assets/logo.jpeg";
+import combo from "../src/assets/combo.jpeg";
+
 const menuItems = [
   {
     name: "Reg. Bhaji",
@@ -50,38 +52,7 @@ const menuItems = [
       },
     ],
   },
-  {
-    name: "Green Bhaji",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    category: "bhajipav",
-    options: [
-      {
-        qty: "1KG",
-        price: "180 Rs.",
-      },
-      {
-        qty: "500GM",
-        price: "100 Rs.",
-      },
-    ],
-  },
-  {
-    name: "Bowl Bhaji",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg",
-    category: "bhajipav",
-    options: [
-      {
-        qty: "1KG",
-        price: "180 Rs.",
-      },
-      {
-        qty: "500GM",
-        price: "100 Rs.",
-      },
-    ],
-  },
+
   {
     name: "Paneer Bhaji",
     image:
@@ -219,19 +190,15 @@ const menuItems = [
 
   {
     name: "500 GM Bhaji + 500 GM Pulav + 6 Pav",
-    image:
-      "https://florafoods.in/wp-content/uploads/2023/07/COMBO-OFFERS-.png",
+    image: `${combo}`,
     category: "combo",
-    price:'180 Rs'
-   
+    price: "180 Rs",
   },
   {
     name: "1 KG Bhaji + 1 KG Pulav + 12 Pav",
-    image:
-      "https://florafoods.in/wp-content/uploads/2023/07/COMBO-OFFERS-.png",
+    image: `${combo}`,
     category: "combo",
-    price:'350 Rs'
-   
+    price: "350 Rs",
   },
 
   // Add more items similarly
@@ -250,16 +217,18 @@ const App = () => {
             fontSize: "60px",
           }}
         >
-          <h2>The Kilogram</h2>
-          <p></p>
+          <h2 style={{ padding: "0px", margin: "0px" }}>The Kilogram</h2>
           <img src={logo} alt="The Kilogram" />
         </div>
       </header>
       <div className="main">
         <div className="menu">
-          <h2>Our Menu</h2>
+          <h1 style={{ padding: "0px", margin: "0px", fontSize: "50px" }}>
+            Our Menu
+          </h1>
+          <hr style={{ marginTop: "30px", marginBottom: "30px" }} />
 
-          <h3 className="productHeader">Bhaji Pav</h3>
+          <h2 className="productHeader">Bhaji Pav</h2>
 
           <div className="menu-items">
             {menuItems
@@ -280,8 +249,8 @@ const App = () => {
                 </div>
               ))}
           </div>
-          <hr />
-          <h3 className="productHeader">Pulav</h3>
+          <hr style={{ marginTop: "30px", marginBottom: "30px" }} />
+          <h2 className="productHeader">Pulav</h2>
 
           <div className="menu-items">
             {menuItems
@@ -303,8 +272,8 @@ const App = () => {
               ))}
           </div>
 
-          <hr />
-          <h3 className="productHeader">Combos</h3>
+          <hr style={{ marginTop: "30px", marginBottom: "30px" }} />
+          <h2 className="productHeader">Combos</h2>
 
           <div className="menu-items">
             {menuItems
@@ -312,11 +281,11 @@ const App = () => {
               .map((item, index) => (
                 <div key={index} className="menu-item">
                   <img src={item.image} alt={item.name} />
-                  <h3 >{item.name}</h3>
+                  <h3>{item.name}</h3>
                   <div className="options">
-                      <span >
-                        <p className="option">{item.price}</p>
-                      </span>
+                    <span>
+                      <p className="option">{item.price}</p>
+                    </span>
                   </div>
                 </div>
               ))}
@@ -325,7 +294,8 @@ const App = () => {
       </div>
       <footer>
         <div className="contact-info">
-          <p>Contact us: 123-456-7890</p>
+          <p>Contact us <br/>
+            Mihit Maheta :- 9099933459</p>
         </div>
         <p>&copy; 2024 The Kilogram</p>
       </footer>
